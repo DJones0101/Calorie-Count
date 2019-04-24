@@ -94,4 +94,6 @@ public class FoodItemDetailsActivity extends AppCompatActivity {
         startActivity(new Intent(FoodItemDetailsActivity.this, DisplayFoodsActivity.class));
 
     }
+
+
 }
