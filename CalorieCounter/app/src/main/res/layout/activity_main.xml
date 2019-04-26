@@ -33,9 +33,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="9dp"
         android:background="@drawable/row_bg"
-        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -57,19 +56,39 @@
             android:padding="14dp"></EditText>
 
         <Button
-        android:id="@+id/submitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:text="@string/Submit_text"/>
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="@string/Submit_text" />
 
         <Button
             android:id="@+id/myFoodList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout"
             android:layout_marginTop="1dp"
-            android:text="@string/my_food_list"/>
+            android:text="@string/my_food_list" />
+
+        <Button
+            android:id="@+id/seeVideoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myFoodList"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="119dp"
+            android:layout_marginLeft="119dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="114dp"
+            android:layout_marginRight="114dp"
+            android:text="Simple Workout Routine" />
 
     </LinearLayout>
+
+
 
 </RelativeLayout>

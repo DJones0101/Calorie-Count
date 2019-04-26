@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.caloriecounter.R;
+import com.google.android.youtube.player.YouTubePlayerView;
+
 import Data.Constants;
 import Data.DatabaseHandler;
 import Model.Food;
@@ -16,7 +18,7 @@ import Model.Food;
 public class MainActivity extends AppCompatActivity {
 
     private EditText foodName, foodCals;
-    private Button submitButton, showMyFoodsButton;
+    private Button submitButton, showMyFoodsButton, workOutRoutine;
     private DatabaseHandler dba;
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         foodCals = (EditText) findViewById(R.id.caloriesEditText);
         submitButton = (Button) findViewById(R.id.submitButton);
         showMyFoodsButton = (Button) findViewById(R.id.myFoodList);
+        workOutRoutine = (Button) findViewById(R.id.seeVideoButton);
 
         String name = foodName.getText().toString().trim();
         String calString = foodCals.getText().toString().trim();
@@ -46,13 +49,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        workOutRoutine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                startActivity(new Intent(MainActivity.this, YoutubeActivity.class));
+
+            }
+        });
 
         showMyFoodsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // go to the next screen
-                finish();
                 startActivity(new Intent(MainActivity.this, DisplayFoodsActivity.class));
             }
         });
